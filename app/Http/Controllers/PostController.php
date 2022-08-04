@@ -7,11 +7,11 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function show()
+    public function show($id)
     {
     $post = Post::all(); 
     //dump($posts); 
     
-    return view('posts.show', ['post' => $post[0]]);
+    return view('posts.show', ['post' => $post[$id - 1]]);
     }
 }
