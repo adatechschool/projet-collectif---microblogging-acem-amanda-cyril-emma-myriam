@@ -15,4 +15,14 @@ class PostController extends Controller
 
         return view('posts.show', ['post' => $post[$id - 1]]);
     }
+
+    public function __construct()
+    {
+        $this->authorizeResource(Post::class, 'post');
+    }
+ 
+    public function create()
+    {
+        return view('posts.create');
+    }
 }
