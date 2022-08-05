@@ -3,4 +3,3 @@
   {{$post->description}}
   <img src="{{ $post->img_url }}">
 </x-guest-layout>
-</x-guest-layout>
