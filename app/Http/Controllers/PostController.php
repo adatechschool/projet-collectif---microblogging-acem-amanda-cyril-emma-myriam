@@ -30,7 +30,7 @@ class PostController extends Controller
         ]);
     
         // 2. On upload l'image dans "/storage/app/public/posts"
-        $chemin_image = $request->img_url->store("posts");
+        $chemin_image = $request->img_url->store("/storage/app/public"); //A MODIFIER ? 
     
         // 3. On enregistre les informations du Post
         Post::create([
@@ -46,7 +46,7 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        //$post = Post::all();
+        // $post = Post::all();
 
         // dump($post); 
 

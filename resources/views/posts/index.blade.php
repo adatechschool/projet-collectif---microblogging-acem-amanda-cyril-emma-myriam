@@ -11,6 +11,8 @@
     <img class="rounded-md" src="{{ $post->img_url }}">
     <h2>by {{$post->user->name}}</h2>
     <p>{{$post->description}}</p>
+    <!--<img src = "{{url('/1B0XWTzkmKaXb8Q6dy45fJpmiKQj5KzvYHhTUkmb.jpg')}}" />-->
+
     </div>
     @endforeach
 </div>
