@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    // créer 10 utilisatrices (User) factices en décommentant la ligne correspondante:
     public function run()
     {
         \App\Models\User::factory(10)->create();

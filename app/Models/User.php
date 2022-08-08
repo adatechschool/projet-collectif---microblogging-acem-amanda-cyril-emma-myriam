@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // pour indiquer quels champs seront éditables par les utilisateurs :
     protected $fillable = [
         'name',
         'email',
@@ -42,6 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Créer un lien entre tables au sens des bases de données relationnelles : entre la table des utilisateurs et celle des posts.
+    // Un utilisateur peut avoir plusieurs posts (mais qu’un post n’a qu’un seul utilisateur) 
     public function posts()
     {
         return $this->hasMany(Post::class);

@@ -12,6 +12,8 @@ class PostSeeder extends Seeder
      *
      * @return void
      */
+
+    // créer 2 publication (Post) factice :
     public function run()
     {
         \App\Models\Post::factory(2)->create();
