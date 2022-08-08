@@ -16,6 +16,12 @@ use App\Http\Controllers\PostController;
 
 Route::resource('posts', PostController::class);
 
+/*
+Route::get('/posts/create', function () {
+    return view('posts.create');
+})->middleware(['auth'])->name('create');
+*/
+
 Route::get('/', function () {
     return view('welcome');
 });

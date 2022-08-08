@@ -10,20 +10,20 @@
 		
 
 		<p>
-			<label for="picture" >Image</label><br/>
-			<input type="file" name="picture" id="picture" >
+			<label for="img_url" >Image</label><br/>
+			<input type="file" name="img_url" id="img_url" >
 
 			<!-- Le message d'erreur pour "picture" -->
-			@error("picture")
+			@error("img_url")
 			<div>{{ $message }}</div>
 			@enderror
 		</p>
 		<p>
-			<label for="content" >Description</label><br/>
-			<textarea name="content" id="content" lang="fr" rows="10" cols="50" placeholder="Le contenu du post" >{{ old('content') }}</textarea>
+			<label for="description" >Description</label><br/>
+			<textarea name="description" id="description" lang="fr" rows="10" cols="50" placeholder="Le contenu du post" >{{ old('description') }}</textarea>
 
 			<!-- Le message d'erreur pour "content" -->
-			@error("content")
+			@error("description")
 			<div>{{ $message }}</div>
 			@enderror
 		</p>
