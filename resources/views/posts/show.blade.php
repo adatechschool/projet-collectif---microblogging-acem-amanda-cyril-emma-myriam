@@ -8,7 +8,7 @@
     <div class="grid place-items-center h-screen">
       <div class="flex items-center mt-3 gap-2">
         <img class="rounded-full w-7" src="https://www.paris.edu/wp-content/uploads/2017/11/default2-1.jpg">
-        <p>{{$post->user->name}}:</p>
+        <p>{{$post->user->name}}</p>
     </div>
       
   
