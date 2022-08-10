@@ -49,14 +49,10 @@ class PostController extends Controller
         // $post = Post::all();
 
         // dump($post); 
-
+        echo asset('storage/depositphotos_2186038-stock-photo-kitten-lays-isolated.jpg');
         return view('posts.show', ['post' => $post]);
     }
 
 
-    // public function __construct()
-    // {
-    //     $this->authorizeResource(Post::class, 'post');
-    // }
  
 }

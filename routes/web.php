@@ -34,3 +34,28 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('testimage/{filename}', function ($filename)
+{
+
+    $path = asset('storage/'.$filename) ;
+    echo ($path);
+
+});
+
+Route::get('tstorage/{filename}', function ($filename)
+{  // /var/www/html/storage
+    // $path = storage_path().'/'. $filename;
+    $path = asset('storage/'.$filename) ;
+    echo ($path);
+
+    if(!File::exists($path)) abort(404);
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
